@@ -89,7 +89,7 @@ const PageHeader = () => {
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
-        <HeaderLink to={'/test'}>적성검사</HeaderLink>
+        <HeaderLink to={'/test/start'}>적성검사</HeaderLink>
         <HeaderLink to={'/roadmap'}>로드맵</HeaderLink>
         <HeaderLink to={'/bootcamp'}>학원일정</HeaderLink>
         <HeaderLink to={'/postscript'}>수료후기</HeaderLink>
