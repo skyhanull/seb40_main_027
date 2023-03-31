@@ -16,7 +16,7 @@ const StartForm = () => {
       ) : (
         <S.StartView>
           <div>환영합니다 여러분! 그럼 테스트를 시작 해 볼까요?</div>
-          <Link to="/test/waring">
+          <Link to="/test/warning">
             <S.StartFormButton onClick={StartHandler}>start</S.StartFormButton>
           </Link>
         </S.StartView>
