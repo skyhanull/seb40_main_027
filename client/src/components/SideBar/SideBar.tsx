@@ -19,7 +19,7 @@ const SideBar = () => {
             <div className="side-bar-content">
               <div>
                 <S.SideBarMenu>
-                  <Link to={'/test'}>적성검사</Link>
+                  <Link to={'/test/start'}>적성검사</Link>
                 </S.SideBarMenu>
                 <S.SideBarMenu>
                   <Link to={'/roadmap'}>로드맵</Link>
