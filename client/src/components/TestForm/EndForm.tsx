@@ -3,6 +3,7 @@ import { yesContent, noContent, isStart } from '../../atoms/index';
 import * as S from './EndForm.style';
 import { Icon } from '@iconify/react';
 import flower1 from '../../assets/image/flower1.png';
+import { Link } from 'react-router-dom';
 
 const EndForm = () => {
   const [isYes, setIsYes] = useRecoilState<number>(yesContent);
@@ -10,7 +11,7 @@ const EndForm = () => {
   const [isStarting, setIsStarting] = useRecoilState(isStart);
 
   const returnHandler = () => {
-    setIsStarting(!isStarting);
+    setIsStarting(false);
     setIsYes(0);
     setIsNo(0);
   };
@@ -54,9 +55,11 @@ const EndForm = () => {
         </div>
       )}
       <div className="return-content">
-        <S.ReturnButton onClick={returnHandler}>
-          <Icon icon="material-symbols:arrow-circle-left-outline-rounded" width="30" height="30" />
-        </S.ReturnButton>
+        <Link to="/test/start">
+          <S.ReturnButton onClick={returnHandler}>
+            <Icon icon="material-symbols:arrow-circle-left-outline-rounded" width="30" height="30" />
+          </S.ReturnButton>
+        </Link>
       </div>
     </S.ResultEndFormContent>
   );
