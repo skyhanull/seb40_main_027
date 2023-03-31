@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/users/login" element={<Login />} />
         <Route path="/users/signup" element={<SignUp />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/test/:name" element={<Test />} />
         <Route path="/roadmap" element={<RoadMap />} />
         <Route path="/bootcamp" element={<BootCamp />} />
         <Route path="/bootcamp/:id" element={<BootCampDetail />} />
