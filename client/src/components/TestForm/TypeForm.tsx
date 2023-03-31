@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import EndForm from './EndForm';
 import { useRecoilState } from 'recoil';
 import { yesContent, noContent } from '../../atoms/index';
@@ -63,8 +63,10 @@ const TypeForm = () => {
             <div className="img-review">{PictureList.filter((el, idx) => idx === idNumber)[0]}</div>
           </S.QuestionContentForm>
           <S.ButtonBoxForm>
-            <S.SelectQuestionButton onClick={ViewYesHandler}>1. Yes</S.SelectQuestionButton>
-            <S.SelectQuestionButton onClick={ViewNoHandler}>2. No</S.SelectQuestionButton>
+            <Link to={`/test/${idNumber + 2}`}>
+              <S.SelectQuestionButton onClick={ViewYesHandler}>1. Yes</S.SelectQuestionButton>
+              <S.SelectQuestionButton onClick={ViewNoHandler}>2. No</S.SelectQuestionButton>
+            </Link>
           </S.ButtonBoxForm>
         </S.FormCaseView>
       )}
